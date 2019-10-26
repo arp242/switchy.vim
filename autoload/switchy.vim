@@ -12,6 +12,9 @@ fun! switchy#switch(cmd, cmd_loaded) abort
 	if l:Fun is# v:null
 		return switchy#error(printf('nothing defined for filetype "%s"', &filetype))
 	endif
+	if bufname('') is# ''
+		return switchy#error('no buffer name')
+	endif
 
 	let l:cmd        = (empty(a:cmd)        ? 'edit'  : a:cmd)
 	let l:cmd_loaded = (empty(a:cmd_loaded) ? 'sbuf'  : a:cmd_loaded)
