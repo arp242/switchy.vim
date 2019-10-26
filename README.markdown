@@ -1,15 +1,18 @@
 Switch to related files.
 
-Usage: map `switchy#do()` to something, for example:
+Usage: map `switchy#switch()` to something, for example:
 
-    nnoremap <Leader>a :call switchy#do('split', 'sbuf')<CR>
+    nnoremap <Leader>a :call switchy#switch('split', 'sbuf')<CR>
 
-    command! Switch call switchy#do('split', 'sbuf')
+    command! Switch call switchy#switch('split', 'sbuf')
 
 The first function argument is the command to use when editing a file (e.g.
 `edit`, `split`, `tabedit`, `sbuf`, etc.), the second argument is the command to
 use when the buffer is already loaded. This is useful to switch to an existing
 split/tab instead of opening a new one.
+
+You can add your own callbacks with `switchy#add()`; see
+[ftplugin/go.vim](ftplugin/go.vim) for an example.
 
 ---
 
