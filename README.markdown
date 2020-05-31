@@ -2,7 +2,9 @@ Switch to related files.
 
 Usage: map `switchy#switch()` to something, for example:
 
-    nnoremap <Leader>a :call switchy#switch('split', 'sbuf')<CR>
+    nnoremap <silent> <Leader>a :call switchy#switch('tabedit', 'sbuf')<CR>
+
+Or use a command if you prefer:
 
     command! Switch call switchy#switch('split', 'sbuf')
 
@@ -18,7 +20,8 @@ You can add your own callbacks with `switchy#add()`; see
 
 Supported filetypes:
 
-- Go: `a.go` ↔ `a_test.go`
+- C: `a.c` ⇄ `a.h`
+- Go: `a.go` ⇄ `a_test.go`
 
 Yeah, it's early days for this plugin. More filetypes soon™
 
