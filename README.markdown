@@ -11,7 +11,12 @@ Or use a command if you prefer:
 The first function argument is the command to use when editing a file (e.g.
 `edit`, `split`, `tabedit`, `sbuf`, etc.), the second argument is the command to
 use when the buffer is already loaded. This is useful to switch to an existing
-split/tab instead of opening a new one.
+split/tab instead of opening a new one. Please note that you must have
+'switchbuf' set in your .vimrc to either 'useopen' or 'usetab' for switchy to 
+switch to an already open window or tab. Otherwise it will create a new window.
+E.g.:
+
+set switchbuf=usetab
 
 You can add your own callbacks with `switchy#add()`; see
 [ftplugin/go.vim](ftplugin/go.vim) for an example.
