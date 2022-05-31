@@ -22,8 +22,9 @@ You can add your own callbacks with `switchy#add()`; see
 
 Supported filetypes:
 
-- C: `a.c` ⇄ `a.h`
-- Go: `a.go` ⇄ `a_test.go`
+    c     a.c   ⇄  a.h
+    cpp   a.cpp ⇄  a.h
+    go    a.go  ⇄  a_test.go
 
 Yeah, it's early days for this plugin. More filetypes soon™
 
@@ -52,5 +53,5 @@ Survey of existing methods:
       :e %<.c
       nnoremap <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
-  It's okay, but not as fast as e.g. `<Leader>a`, also not flexible to multiple
-  filetypes etc.
+  It's okay, but not as fast as e.g. `<Leader>a`, also not flexible for multiple
+  filetypes.

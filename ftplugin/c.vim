@@ -4,4 +4,3 @@ let s:cb = {->
          \ : bufname('')[:-3] . '.c'}
 
 call switchy#add('c', s:cb)
-call switchy#add('cpp', s:cb)
