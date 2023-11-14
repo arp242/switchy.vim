@@ -1,6 +1,6 @@
 let s:cb = {->
-	 \ switchy#has_suffix(bufname(''), '.cpp')
-         \ ? bufname('')[:-5] . '.h'
-         \ : bufname('')[:-3] . '.cpp'}
+	 \ switchy#has_suffix(bufname(''), '.c')
+         \ ? bufname('')[:-3] .. '.h'
+         \ : bufname('')[:-3] .. '.c'}
 
 call switchy#add('cpp', s:cb)
