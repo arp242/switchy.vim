@@ -1,8 +1,8 @@
-let s:cb = {->
-        \ switchy#has_suffix(bufname(''), '.h')
-        \ ? filereadable(bufname('')[:-3] .. '.c' ) ?  bufname('')[:-3] .. '.c' :  bufname('')[:-3] .. '.cpp'
-        \ : switchy#has_suffix(bufname(''), '.c') ? bufname('')[:-3] .. '.h' : bufname('')[:-5] .. '.h'
-        \ }
-
-
-call switchy#add('c', s:cb)
+fun! s:Cb()
+	let [base, ext] = [expand('%:t:r'), expand('%:t:e')]
+	if ext ==# 'h'
+        return base .. (filereadable(base .. '.c') ? '.c' : '.cpp')
+	endif
+    return base .. '.h'
+endfun
+call switchy#add('c', funcref('s:Cb'))

@@ -23,8 +23,9 @@ You can add your own callbacks with `switchy#add()`; see
 Supported filetypes:
 
     c     a.c   ⇄  a.h
-    nim   a.nim ⇄  test_a.nim
+    cpp   a.cpp ⇄  a.h
     go    a.go  ⇄  a_test.go
+    nim   a.nim ⇄  test_a.nim
 
 Yeah, it's early days for this plugin. More filetypes soon™
 
