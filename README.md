@@ -22,10 +22,11 @@ You can add your own callbacks with `switchy#add()`; see
 
 Supported filetypes:
 
-    c     a.c   ⇄  a.h
-    cpp   a.cpp ⇄  a.h
-    go    a.go  ⇄  a_test.go
-    nim   a.nim ⇄  test_a.nim
+    c       a.c   ⇄  a.h
+    cpp     a.cpp ⇄  a.h or a.hpp
+    go      a.go  ⇄  a_test.go
+    nim     a.nim ⇄  test_a.nim
+    python  a.py  ⇄  tests/test_a.py
 
 Yeah, it's early days for this plugin. More filetypes soon™
 
